@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet">
+
+    <link href="css/styles.css" rel="stylesheet">
+    
+</head>
+<body>
+    <div class ="container">
+        <div class = "sidebar">
+            <img class="profile-picture" id="profile-picture">
+            <span class = "profile-name" id="profile-name">Samuel Ledesma</span>
+            <button class="exit-button" onclick="signOut()">Salir</button>
+        </div>
+        <div class="chat-container">
+            <div class="header">
+                <span>Chat</span>
+            </div>
+            <div class="messages" id="messages">
+
+            </div>
+            <div class="text-input">
+                <form onsubmit = "sendMessage(event)" class="message-form">
+                    <input id="message-input" placeholder="Escribe un mensaje">
+                    <button id="send-button">Enviar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/8.9.1/firebase.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/8.9.1/firebase-auth.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/8.9.1/firebase-database.min.js"></script>
+    <script src="js/firebase.js"></script>
+    <script src="js/chat.js"></script>
+</body>
+</html>
