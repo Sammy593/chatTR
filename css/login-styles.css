@@ -1,31 +1,79 @@
 html,body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     font-family: sans-serif;
 }
 
+body{
+    background: url('images/bg.jpg') no-repeat center;
+    background-size: cover;
+}
+
 .auth-container{
-    margin: 20px auto;
-    border: 1px solid rgb(201, 199, 199);
-    max-width: 300px;
-    padding: 20px;
+    height: 100vh;
+    width: 100vw;
     display: flex;
     flex-direction: column;
-    text-align: center;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.fondo-mitad{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+    padding: 80px 40px 30px;
+    background: rgba(0,0,0,0.7);
     border-radius: 10px;
+    color: #fff;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.5);
 }
 
-.auth-container h2{
-    margin-top: 5px;
-    border-bottom: 1px solid rgb(206, 203, 203);
-    padding-bottom: 10px;
+.fondo-mitad::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(255,255,255, 0.08);
+    transform: skewX(-26deg);
+    transform-origin: bottom left;
+    border-radius: 10px;
+    pointer-events: none;
 }
 
-.auth-container button{
+.fondo-mitad img{
+  position:absolute;
+  top: -100px;
+  left: 100px;
+  width: 50%;
+  height: 80%;
+  border-radius: 10px;
+  pointer-events: none;
+
+}
+
+.fondo-mitad h2{
+    text-align: center;
+    position: relative;
+    letter-spacing: 1px;
+    margin-bottom: 2rem;
+    color: rgb(255, 153, 127);
+    left: 8px;
+}
+
+.fondo-mitad button{
+    display: block;
     border: none;
     outline: none;
+    background: rgb(255, 153, 127);
+    font-size: 1rem;
+    padding: 10px 20px;
     border-radius: 10px;
-    background-color: rgb(26, 104, 91);
     cursor: pointer;
-    padding: 5px;
-    color: white;
-    font-size: 10px;
 }
